@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "java",
+			"mainClass": "Controller",
+			"targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+			"elements": [
+				"${compileOutput}",
+				"${dependencies}"
+			],
+			"problemMatcher": [],
+			"label": "java: exportjar:TicTacToe",
+			"group": "build"
+		},
+		{
+			"type": "java",
+			"mainClass": "tictactoe.Controller",
+			"targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+			"elements": [
+				"${compileOutput}",
+				"${dependencies}"
+			],
+			"problemMatcher": [],
+			"label": "java: exportjar:TicTacToe",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
