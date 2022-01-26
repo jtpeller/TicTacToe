@@ -8,7 +8,7 @@ A simple GUI TicTacToe game implemented in Java. It has a few modes:
 - Normal AI
 - Hard AI
 - Unbeatable AI
-- Unbeatable AI vs Unbeatable AI (this tends to crash)
+- Unbeatable AI vs Unbeatable AI ~~(this tends to crash)~~ (fixed)
 
 ## How
 

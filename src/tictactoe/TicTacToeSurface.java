@@ -10,6 +10,7 @@ import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.SpringLayout;
+import javax.swing.JOptionPane;
 
 public class TicTacToeSurface extends Surface implements MouseListener {
 	/***** ATTRIBUTES *****/
@@ -33,7 +34,7 @@ public class TicTacToeSurface extends Surface implements MouseListener {
 					  IMPOSSIBLE = 4,
 					  AIvsAI = 5;
 	
-	private final int GAME_COUNT = 10;		// number of games played between the AI.
+	private final int GAME_COUNT = 1000;	// number of games played between the AI.
 	
 	// Sizes & Dimensions
 	private final int IMG_WIDTH = 40,	// width of the image buttons
@@ -212,11 +213,11 @@ public class TicTacToeSurface extends Surface implements MouseListener {
 				opponentWins = 0;
 			}
 		}
-		// print stats of the simulation
-		System.out.println("# Games - " + GAME_COUNT + ".");
-		System.out.println("# Games won by " + opponent + " - " + opponentWins);
-		System.out.println("# Games won by " + player + " - " + playerWins);
-		System.out.println("# Games tied - " + tieCount + ".");
+		
+		// format stats of the simulation
+		String out = String.format("Game count -- %d. Games won by %s -- %d. Games won by %s -- %d. Games tied -- %d.",
+		 GAME_COUNT, opponent, opponentWins, player, playerWins, tieCount);
+		JOptionPane.showMessageDialog(null, out);
 	}
 		
 	
